@@ -1,0 +1,22 @@
+print("YILLIK YAKIT SARFIYATI HESAPLAMA PROGRAMI")
+print("-"*18, "ZAFER", "-"*18)
+km=float(input("Araciniz gunluk kac km yol yapmaktadir (65.4 gibi)?"))
+km_maliyet=float(input("Aracinizin KM basi yakit sarfiyati kac Euro`dur (0.4 Euro gibi)?"))
+gunluk_maliyet=km*km_maliyet
+ocak=mart=mayis=temmuz=agustos=ekim=aralik=31
+subat=28
+nisan=haziran=eylul=kasim=30
+ocak_maliyet=31*gunluk_maliyet
+subat_maliyet=28*gunluk_maliyet
+mart_maliyet=31*gunluk_maliyet
+nisan_maliyet=30*gunluk_maliyet
+mayis_maliyet=31*gunluk_maliyet
+haziran_maliyet=30*gunluk_maliyet
+temmuz_maliyet=31*gunluk_maliyet
+agustos_maliyet=31*gunluk_maliyet
+eylul_maliyet=30*gunluk_maliyet
+ekim_maliyet=31*gunluk_maliyet
+kasim_maliyet=30*gunluk_maliyet
+aralik_maliyet=31*gunluk_maliyet
+yillik_maliyet=365*gunluk_maliyet
+print(" gunluk\t:", gunluk_maliyet, "\n", "ocak\t:", ocak_maliyet, "\n", "subat\t:", subat_maliyet, "\n", "mart\t:", mart_maliyet, "\n", "nisan\t:", nisan_maliyet, "\n", "mayis\t:", mayis_maliyet, "\n", "haziran:", haziran_maliyet, "\n", "temmuz\t:", temmuz_maliyet, "\n", "agustos:", agustos_maliyet, "\n","eylul\t:", eylul_maliyet, "\n", "ekim\t:", ekim_maliyet, "\n", "kasim\t:", kasim_maliyet, "\n", "aralik\t:", aralik_maliyet, "\n", "yillik\t:", yillik_maliyet)
