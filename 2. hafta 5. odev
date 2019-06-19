@@ -1,0 +1,13 @@
+dosyacim=open("aylikmasraf.txt", "w")
+print("MASRAF HESAPLAMA PROGRAMI")
+print("-"*8, "ZAFER", "-"*8, end="\n\n")
+aylik_gelir=float(input("Aylik geliriniz ne kadardir?\t:"))
+mutfak=float(input("Aylik mutfak masrafiniz ne kadardir?\t:"))
+egitim=float(input("Aylik egitim masrafiniz ne kadardir?\t:"))
+giyim=float(input("Aylik giyim masrafiniz ne kadardir?\t:"))
+ulasim=float(input("Aylik ulasim masrafiniz ne kadardir?\t:"))
+aylik_gider=mutfak+egitim+giyim+ulasim
+gid_gel_oran=(aylik_gider/aylik_gelir)*100
+print("Aylik gideriniz\t:", aylik_gider, "\n", "Aylik giderinizin gelirinize orani\t:", gid_gel_oran, "\n")
+print("Aylik gideriniz\t:", aylik_gider, "\n", "Aylik giderinizin gelirinize orani\t:", gid_gel_oran, "\n", file=dosyacim)
+dosyacim.close()
