@@ -1,0 +1,14 @@
+dosyam=open("faizHesaplama.txt", "w")
+print("FAIZ HESAPLAMA PROGRAMI")
+print("-"*8, "ZAFER", "-"*8, end="\n\n")
+ana_para=float(input("Bankaya yatiracaginiz para miktari ne kadardir?\t:"))
+faiz_orani=float(input("Tercih ettiginiz faiz orani ne kadardir?\t:"))
+faiz_suresi=float(input("Paranizi bankada tutmayi dusundugunuz sure kac yildir?\t:"))
+toplam_faiz=ana_para*faiz_orani*faiz_suresi/100
+yillik_faiz=(ana_para*faiz_orani*faiz_suresi/100)/faiz_suresi
+aylik_faiz=((ana_para*faiz_orani*faiz_suresi/100)/faiz_suresi)/12
+gunluk_faiz=((ana_para*faiz_orani*faiz_suresi/100)/faiz_suresi)/365
+toplam_para=ana_para+toplam_faiz
+print(" Toplam faiz geliriniz\t:", toplam_faiz, "\n", "Yillik faiz geliriniz\t:", yillik_faiz, "\n", "Aylik faiz geliriniz\t:", aylik_faiz, "\n", "Gunluk faiz geliriniz\t:", gunluk_faiz, "\n", "Vade sonu toplam paraniz (Anapara+Faiz)\t:", toplam_para, "\n")
+print(" Toplam faiz geliriniz\t:", toplam_faiz, "\n", "Yillik faiz geliriniz\t:", yillik_faiz, "\n", "Aylik faiz geliriniz\t:", aylik_faiz, "\n", "Gunluk faiz geliriniz\t:", gunluk_faiz, "\n", "Vade sonu toplam paraniz (Anapara+Faiz)\t:", toplam_para, "\n", file=dosyam)
+dosyam.close()
