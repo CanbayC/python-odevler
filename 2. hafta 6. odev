@@ -1,0 +1,18 @@
+print("""Python’un kurucusu Guido Van Rossum, Hollanda’nin Amsterdam’daki  "Universiteit Van Amsterdam" okulundan  1982’de mezun olmuştur.""")
+
+
+
+
+
+
+kurucu="Guido Van Rossum,"
+universite="`Universiteit Van Amsterdam`"
+tarih="1982`de"
+print("Python’un kurucusu", kurucu, "Hollanda’nin Amsterdam’daki", universite, "okulundan", tarih, "mezun olmustur.")
+
+
+
+
+
+
+print("{}’un kurucusu {}, Hollanda’nin Amsterdam’daki  `{}` okulundan  {}’de mezun olmuştur.".format("Python", "Guido Van Rossum", "Universiteit Van Amsterdam", "1982"))
