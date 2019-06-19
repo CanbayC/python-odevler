@@ -1,0 +1,3 @@
+mesafe=float(input("Amsterdam ile Ter Apel arasi kac km'dir?\t"))
+mil=mesafe/1.609344
+print("Bu iki sehir arasi", mil, "mildir")
