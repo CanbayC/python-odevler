@@ -1,0 +1,31 @@
+print("""
+1-10 arasi bir sayi tuttum aklimda.
+Aklimdaki sayiyi bulabilir misin?
+Hadi bakalim!
+""")
+sayim="4"
+aklimdaki_sayi=input("Lutfen bir sayi giriniz : ")
+if aklimdaki_sayi==sayim:
+    print("Tebrikler. Ilk seferde bildiniz.", "\u2605"*3)
+if aklimdaki_sayi!=sayim:
+    print("Bilemediniz. Ikinci hakkinizi kullanin.")
+aklimdaki_sayi=input("Lutfen bir sayi giriniz : ")
+if aklimdaki_sayi==sayim:
+    print("Tebrikler. Ikinci seferde bildiniz.", "\u2605"*3)
+if aklimdaki_sayi!=sayim:
+    print("Bilemediniz. Ucuncu hakkinizi kullanin.")
+aklimdaki_sayi=input("Lutfen bir sayi giriniz : ")
+if aklimdaki_sayi==sayim:
+    print("Tebrikler. Ucuncu seferde bildiniz.", "\u2605"*2)
+if aklimdaki_sayi!=sayim:
+    print("Bilemediniz. Dorduncu hakkinizi kullanin.")
+aklimdaki_sayi=input("Lutfen bir sayi giriniz : ")
+if aklimdaki_sayi==sayim:
+    print("Tebrikler. Dorduncu seferde bildiniz.", "\u2605"*2)
+if aklimdaki_sayi!=sayim:
+    print("Bilemediniz. Besinci ve son hakkinizi kullanin.")
+aklimdaki_sayi=input("Lutfen bir sayi giriniz : ")
+if aklimdaki_sayi==sayim:
+    print("Tebrikler. Besinci ve son hakkinizda bildiniz.", "\u2605"*1)
+if aklimdaki_sayi!=sayim:
+    print("Bilemediniz. Haklariniz tukendi. Gecmis olsun.")
