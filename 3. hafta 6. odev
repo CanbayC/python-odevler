@@ -1,0 +1,24 @@
+vize1=float(input("1. vize puaninizi giriniz (0-100 arasi bir puan giriniz) : "))
+vize2=float(input("2. vize puaninizi giriniz (0-100 arasi bir puan giriniz) : "))
+final=float(input("Final puaninizi giriniz (0-100 arasi bir puan giriniz)   : "))
+
+notum=(vize1*0.3)+(vize2*0.3)+(final*0.4)
+
+if 100>=notum>=90:
+    print ("AA", notum)
+if 89>=notum>=85:
+    print ("BA", notum)
+if 84>=notum>=80:
+    print ("BB", notum)
+if 79>=notum>=75:
+    print ("CB", notum)
+if 74>=notum>=70:
+    print ("CC", notum)
+if 69>=notum>=65:
+    print ("DC", notum)
+if 64>=notum>=60:
+    print ("DD", notum)
+if 59>=notum>=55:
+    print ("FD", notum)
+if 54>=notum>=0:
+    print ("FF", notum)
