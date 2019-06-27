@@ -1,0 +1,16 @@
+print("""
+Islem turu olarak; donusturmek istediginiz mesafe yi 
+    km'den mil'e donusturmek icin   1
+    mil'den km'ye donusturmek icin  2
+yaziniz.
+""")
+
+islem_turu=int(input("Islem turunu giriniz (1 veya 2) : "))
+uzunluk=float(input("Donusturmek istediginiz mesafeyi sayi olarak giriniz :"))
+
+if islem_turu==1:
+    print(uzunluk*0.621371)
+if islem_turu==2:
+    print(uzunluk*1.609)
+if islem_turu<=0 or islem_turu>=3:
+    print("Girdiginiz verileri kontrol edip tekrar deneyiniz.")
