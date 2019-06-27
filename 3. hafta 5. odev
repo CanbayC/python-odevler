@@ -1,0 +1,22 @@
+print("""
+Bu ATM'de islemler Euro olarak gerceklestirilmektedir.  
+Yapabileceginiz islemler asagida siralanmistir.
+Yapmak istediginiz islem icin karsisindaki sayilari giriniz.
+Bakiye kontrolu     1
+Para yatirma        2
+Para cekme          3
+""")
+islem=input("Yapmak istediginiz islemi giriniz : ")
+bakiye=float(1000)
+if islem=="1":
+    print(bakiye)
+if islem=="2":
+    yeniyatan=float(input("Yatirmak istediginiz miktari giriniz : "))
+    son_para = float(bakiye + yeniyatan)
+    print("Bakiyeniz : ", son_para)
+if islem=="3":
+    cekilecek_miktar=float(input("Cekmek istediginiz para miktari ne kadardir ? "))
+    if cekilecek_miktar<=bakiye:
+        print("Lutfen talep ettiginiz tutari aliniz. Kalan bakiyeniz : ", bakiye-cekilecek_miktar)
+    if cekilecek_miktar>bakiye:
+        print("Bakiyeniz bu islemi gerceklestirmeye yetmemektedir. Lutfen bakiyenizi asan bir miktar talep etmeyiniz.")
