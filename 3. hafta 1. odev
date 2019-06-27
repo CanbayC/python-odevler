@@ -1,0 +1,31 @@
+dgm_ay=input("Yilin kacinci ayinda dogdugunuzu giriniz (1, 2, 12 gibi) : ")
+dgm_gun=input("Ayin kacinci gununde dogdugunuzu giriniz (04, 09, 18, 26 gibi) : ")
+
+dgm_trh=int(dgm_ay+dgm_gun)
+
+if 321<=dgm_trh<=331 or 401<=dgm_trh<=420:
+    print("Burcunuz : Koc")
+elif 421<=dgm_trh<=430 or 501<=dgm_trh<=521:
+    print("Burcunuz : Boga")
+elif 522<=dgm_trh<=531 or 601<=dgm_trh<=622:
+    print("Burcunuz : Ikizler")
+elif 623<=dgm_trh<=630 or 701<=dgm_trh<=722:
+    print("Burcunuz : Yengec")
+elif 723<=dgm_trh<=731 or 801<=dgm_trh<=822:
+    print("Burcunuz : Aslan")
+elif 823<=dgm_trh<=831 or 901<=dgm_trh<=922:
+    print("Burcunuz : Basak")
+elif 923<=dgm_trh<=930 or 1001<=dgm_trh<=1022:
+    print("Burcunuz : Terazi")
+elif 1023<=dgm_trh<=1031 or 1101<=dgm_trh<=1121:
+    print("Burcunuz : Akrep")
+elif 1122<=dgm_trh<=1130 or 1201<=dgm_trh<=1221:
+    print("Burcunuz : Yay")
+elif 1222<=dgm_trh<=1231 or 101<=dgm_trh<=121:
+    print("Burcunuz : Oglak")
+elif 122<=dgm_trh<=131 or 201<=dgm_trh<=219:
+    print("Burcunuz : Kova")
+elif 220<=dgm_trh<=228 or 301<=dgm_trh<=320:
+    print("Burcunuz : Balik")
+else:
+    print("Girdiginiz verilerin dogrulugunu kontrol edip tekrar deneyin.")
