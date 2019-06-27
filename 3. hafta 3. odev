@@ -1,0 +1,18 @@
+dosya=open("kullanici_prl.txt", "w")
+print("""
+Lutfen 3-18 karakterden olusan bir kullanici adi belirleyiniz ve kullanici adinizda rakam kullanmayiniz.
+""")
+username=input("Kullanici adinizi giriniz : ")
+if len (username)>18 or len (username)<3:
+    print("Lutfen belirleyeceginiz kullanici adi 3-18 karakterden olussun.")
+if "1" in username or "2" in username or "3" in username or "4" in username or "5" in username or "6" in username or "7" in username or "8" in username or "9" in username or "0" in username:
+    print("Lutfen kullanici adinizda rakam kullanmayiniz.")
+print("""
+Lutfen 6-12 karakterden olusan bir parola belirleyiniz.
+""")
+parola=input("Parolanizi giriniz : ")
+if len (parola)>12 or len (parola)<6:
+    print("Lutfen belirleyeceginiz parola 6-12 karakterden olussun.")
+print("Kullanici adiniz : ", username, "\n", "Parolaniz : ", parola, "\n")
+print(" Kullanici adiniz : ", username, "\n", "Parolaniz : ", parola, "\n", file=dosya)
+dosya.close()
