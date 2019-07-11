@@ -1,0 +1,13 @@
+print("HARF BUYULTME PROGRAMI")                                                             # imza sablonumuzun ilk satirini yazdik
+print("-" * 7, "ZAFER", "-" * 7, end="\n\n")                                                # imza sablonumuzun ikinci satirini yazdik
+
+while True:                                                                                 # dongumuzu olusturuyoruz
+    takimim = input("Lutfen taraftari oldugunuz takimin tam adini giriniz : ")              # kisiden veri aliyoruz
+
+    if bool(takimim) == False:                                                              # kisinin veri girmeme durumuna karsi uyari veriyoruz
+        print("Lutfen veri girisi yapiniz, bos birakmayiniz.")
+        continue
+
+    if bool(takimim) == True:                                                               # kisi veri girmisse sonuc verip cikiyoruz
+        print(takimim.upper())
+        quit()
