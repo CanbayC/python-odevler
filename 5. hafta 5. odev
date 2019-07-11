@@ -1,0 +1,18 @@
+print("TURKCE LATIN HARF DEGISTIRME PROGRAMI")                      # imza sablonumuzun ilk satirini yazdik
+print("-" * 14, "ZAFER", "-" * 14, end="\n\n")                      # imza sablonumuzun ikinci satirini yazdik
+
+
+sesliharftopcular=open("sesliharf_topcular.txt", "r")               # mevcut dosyamizi okuma formatinda aciyoruz
+latinharftopcular=open("latinharf_topcular.txt", "w")               # yeni dosyamizi yazma modunda aciyoruz
+
+turkce_harfler="şçöğüıŞÇÖĞÜİ"                                       # turkce karakterleri tanimliyoruz
+latin_karsilik="scoguiSCOGUI"                                       # turkce karakterlerin karsiliklarini tanimliyoruz
+ceviri_tablosu = str.maketrans(turkce_harfler, latin_karsilik)      # ceviri formulunu ekliyoruz
+metin=sesliharftopcular.read()
+print(metin.translate(ceviri_tablosu), file=latinharftopcular)      # yeni dosyamizi yazdiriyoruz
+print("""
+Isleminiz basariyla gerceklestirilmistir. 
+Lutfen sonucu gormek icin dosyanizi kontrol ediniz.
+""")                                                                # islemin basariyla tamamlandigini kullaniciya bildiriyoruz
+sesliharftopcular.close()
+latinharftopcular.close()
