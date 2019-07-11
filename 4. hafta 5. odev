@@ -1,0 +1,32 @@
+print("SAYI - HARF YAZDIRMA")                                          #imza sablonumuzun ilk satirini yazdik
+print("-" * 6, "ZAFER", "-" * 6, end="\n\n")                  #imza sablonumuzun ikinci satirini yazdik
+a=0                                                             #degisken belirliyoruz
+for a in range(0,100):                                          #dongumuzu olusturuyoruz
+    a+=1                                                        #degiskenin artis miktarini belirliyoruz
+    if a%5==0 and a%3==0:                                       #sorudaki talebe gore formulleri yaziyoruz
+        print("FIZZBUZZ")
+    elif a%3==0:
+        print("FIZZ")
+    elif a%5==0:
+        print("BUZZ")
+    else:
+        print(a)
+
+
+
+
+
+
+'''print("SAYI - SIMGE YAZDIRMA")                                  #imza sablonumuzun ilk satirini yazdik
+print("-" * 12, "ZAFER", "-" * 12, end="\n\n")                  #imza sablonumuzun ikinci satirini yazdik
+a=0                                                             #degisken belirliyoruz
+while a<100:                                                    #dongumuzu olusturuyoruz
+    a+=1                                                        #degiskenin artis miktarini belirliyoruz
+    if a%5==0 and a%3==0:                                       #sorudaki talebe gore formulleri yaziyoruz
+        print("FIZZBUZZ")
+    elif a%3==0: 
+        print("FIZZ")
+    elif a%5==0:
+        print("BUZZ")
+    else:
+        print(a)'''
