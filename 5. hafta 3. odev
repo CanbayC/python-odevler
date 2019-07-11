@@ -1,0 +1,15 @@
+print("DIZIDEKI RAKAMLARI TOPLAMA PROGRAMI")                # imza sablonumuzun ilk satirini yazdik
+print("-" * 14, "ZAFER", "-" * 14, end="\n\n")              # imza sablonumuzun ikinci satirini yazdik
+
+rakam_kumesi="0123456789"                                   # rakamlari degiskene atadik
+
+metin=input("""Lutfen metninizi asagiya giriniz 
+""")                                                        # kisiden veri talep ediyoruz
+
+a=0
+
+for i in metin:                                             # dongumuzu olusturduk
+    if i in rakam_kumesi:
+        a+=int(i)
+
+print(a)                                                    # sonucu gosterdik
