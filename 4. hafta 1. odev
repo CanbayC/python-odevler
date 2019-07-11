@@ -1,0 +1,23 @@
+
+print("KULLANICI ADI - PAROLA YAZDIRMA")                        #imza sablonumuzun ilk satirini yazdik
+print("-" * 12, "ZAFER", "-" * 12, end="\n\n")                  #imza sablonumuzun ikinci satirini yazdik
+
+dosya_username=open("kullanici_adlarim.txt", "a+")              #kullanici adlarini tuttugumuz bir dosya actik
+dosya_password=open("parolalarim.txt", "a+")                    #parolalari tuttugumuz bir dosya actik
+
+password=input("Lutfen parolanizi giriniz :")                   #kullanicidan parola istedik
+print(password, file=dosya_password)                            #parolayi dosyaya yazdirdik
+print("Parolaniz basariyla kaydedilmistir")
+
+
+metin=dosya_username.read()
+username=input("Lutfen kullanici adinizi giriniz : ")           #kullanicidan kullanici adi istedik
+for satir in metin:
+    if username in metin:
+        print("Bu kullanici adi daha once kullanildi. Baska bir kullanici adi deneyiniz.")
+    if not username in metin:
+        dosya_username = open("kullanici_adlarim.txt", "a")
+        print(username, file=dosya_username)
+        print("Kullanici adiniz basariyla kaydedilmistir.")
+
+# bu program istedigimiz sonucu tam vermedi, patladi. simdilik dursun burda. zamanla gelistiririz.
