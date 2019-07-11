@@ -1,0 +1,21 @@
+print("TAKIM LISTELERI PROGRAMI")                                   # imza sablonumuzun ilk satirini yazdik
+print("-" * 9, "ZAFER", "-" * 9, end="\n\n")                        # imza sablonumuzun ikinci satirini yazdik
+
+bjk=open("besiktas.txt", "w")                                       # herbir takim icin bir dosya aciyoruz
+gs=open("galatasaray.txt", "w")
+fb=open("fenerbahce.txt", "w")
+
+topcular=open("futbolcular.txt", "r")                               # verileri alacagimiz dosyayi aciyoruz
+
+for satir in topcular:                                              # dongumuzu olusturuyoruz
+    if "Fenerbahçe" in satir:
+        print(satir, file=fb)
+    elif "Galatasaray" in satir:
+        print(satir, file=gs)
+    elif "Beşiktaş" in satir:
+        print(satir, file=bjk)
+print("Takim ayristirma islemi basari ile tamamlanmistir.")         # islemin tamamlandigini kullaniciya bildiriyoruz
+bjk.close()                                                         # actigimiz dosyalari kapatiyoruz
+gs.close()
+fb.close()
+topcular.close()
