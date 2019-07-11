@@ -1,0 +1,51 @@
+print("ALAN - HACIM HESAPLAMA PROGRAMI")                                #imza sablonumuzun ilk satirini yazdik
+print("-" * 12, "ZAFER", "-" * 12, end="\n\n")                          #imza sablonumuzun ikinci satirini yazdik
+print("""
+Yapmak istediginiz islem icin asagidaki ilgili kodlari kullaniniz:
+1   Kare alan hesaplama
+2   Ucgen alan hesaplama
+3   Dikdortgen alan hesaplama
+4   Kup hacim hesaplama
+5   Kure hacim hesaplama
+6   Koni hacim hesaplama
+7   Cikis
+""")                                                                    #islemlerin kolay yapilmasi icin kodlarini belirledik
+while True:                                                             #muteaddit islem yapilacagi icin dongu olusturduk
+    try:                                                                #olasi hatalara karsi tedbir aldik
+        islem=int(input("Islem kodunuzu giriniz : "))
+        if islem < 1 or islem > 7:                                      #yanlis veri girisine karsi ozel uyari yaptik
+            print("Lutfen aciklamada belirtildigi uzere yapmak istediginiz isleme gore 1-7 arasi bir deger giriniz.")
+        if islem==1:
+            karekenar=float(input("Karenin kenar uzunlugunu giriniz :"))
+            kare_alan=float((karekenar**2))
+            print("Karenin alani :", kare_alan)
+        if islem==2:
+            uzunkenar=float(input("Dikdortgenin uzun kenarini giriniz :"))
+            kisakenar=float(input("Dikdortgenin kisa kenarini giriniz :"))
+            dikdortgen_alan=(uzunkenar*kisakenar)
+            print("Dikdortgenin alani :", dikdortgen_alan)
+        if islem==3:
+            kenar_ucgen=float(input("Ucgenin kenar uzunlugunu giriniz :"))
+            yukseklik_ucgen=float(input("Yuksekligi giriniz :"))
+            ucgen_alan=(kenar_ucgen*yukseklik_ucgen)/2
+            print("Ucgenin alani: ", ucgen_alan)
+        if islem==4:
+            kenar_kup=float(input("Kupun kenar uzunlugunu giriniz :"))
+            kup_hacim=kenar_kup**3
+            print("Kupun hacmi: ", kup_hacim)
+        if islem==5:
+            yaricap_kure=float(input("Kurenin yaricap uzunlugunu giriniz :"))
+            pi=3.14159
+            kure_hacim=4/3*pi*yaricap_kure**3
+            print("Kurenin hacmi: ", kure_hacim)
+        if islem == 6:
+            yaricap_koni = float(input("Koninin yaricap uzunlugunu giriniz :"))
+            yukseklik_koni= float(input("Koninin yukseklik degerini giriniz :"))
+            pi = 3.14159
+            koni_hacim = (1 / 3) * pi * (yaricap_koni ** 2) * yukseklik_koni
+            print("Koninin hacmi: ", koni_hacim)
+        if islem == 7:
+            print("Cikis yapiliyor")
+            quit()
+    except ValueError:                                                                              #en olasi hataya ozel uyari mesaji girildi
+        print("Lutfen sayi disinda veri girmeyiniz. Talep edilen verileri eksiksiz giriniz.")
