@@ -1,0 +1,37 @@
+print("KARAKTER AYIKLAMA PROGRAMI")                                                             # imza sablonumuzun ilk satirini yazdik
+print("-" * 7, "ZAFER", "-" * 7, end="\n\n")                                                    # imza sablonumuzun ikinci satirini yazdik
+
+bigletters=open("bigletters.txt", "w")                                                          # kisiden aldigimiz farkli karakter tiplerini kaydedecegimiz dosyalari aciyoruz
+smallletters=open("smallletters.txt", "w")
+figures=open("figures.txt", "w")
+others=open("others.txt", "w")
+
+cap_letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ"                                                        # karakterleri tanimliyoruz
+low_letters="abcdefghijklmnopqrstuvwxyz"
+all_figures="0123456789"
+
+metin=input("""Lutfen metninizi asagiya giriniz 
+""").replace(" ","")                                                                            # kisiden veri aliyoruz
+
+for i in metin:                                                                                 # metindeki karakteri incelemek icin dongu olusturuyoruz
+    if i in cap_letters:
+        print(i, end="", file=bigletters)
+    elif i in low_letters:
+        print(i, end="", file=smallletters)
+    elif i in all_figures:
+        print(i, end="", file=figures)
+    else:
+        print(i, end="", file=others)
+
+with open("bigletters.txt", "r") as bigletters:                                                 # ilgili dosyalari okuyup karakter uzunluklarini tespit ediyoruz
+    for h in bigletters:
+        print ("Capital letters", len(h))
+with open("smallletters.txt", "r") as smallletters:
+    for h in smallletters:
+        print("Small letters", len(h))
+with open("figures.txt", "r") as figures:
+    for h in figures:
+        print("Figures", len(h))
+with open("others.txt", "r") as others:
+    for h in others:
+        print("Other characters", len(h))
