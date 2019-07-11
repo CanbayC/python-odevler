@@ -1,0 +1,21 @@
+print("ASAL SAYI BULMA PROGRAMI")                                   # imza sablonumuzun ilk satirini yazdik
+print("-" * 8, "ZAFER", "-" * 8, end="\n\n")                        # imza sablonumuzun ikinci satirini yazdik
+
+while True:                                                         # muhtelif denemeler icin dongumuzu olusturuyoruz
+    try:                                                            # olasi hatalar icin tedbirimizi aliyoruz
+        sayim = int(input("Lutfen bir sayi giriniz : "))            # kullanicidan sayi girisi istiyoruz
+        if sayim<=1:
+            print("Lutfen 1'den buyuk bir sayi giriniz.")
+            continue
+    except ValueError:                                              # en olasi hataya karsi ozel uyari mesaji yaziyoruz
+        print("Lutfen bir SAYI giriniz. Sayi disinda bir karakter girmeyiniz.")
+        continue
+    if sayim==2:
+        print("Girdiginiz sayi ({}) bir ASAL sayidir.".format(sayim))
+
+    for i in range(2, sayim):                                       # asal sayi tespiti icin formulasyonumuzu giriyoruz
+        if (sayim%i)==0:
+            print("Girdiginiz sayi ({}) bir asal sayi DEGILDIR.".format(sayim))
+            break
+        elif(sayim%i)!=0 and (i==sayim - 1):
+            print("Girdiginiz sayi ({}) bir ASAL sayidir.".format(sayim))
