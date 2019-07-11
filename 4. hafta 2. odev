@@ -1,0 +1,25 @@
+print("SAYI TAHMIN OYUNU")                                                      # imza sablonumuzun ilk satirini yazdik
+print("-" * 5, "ZAFER", "-" * 5, end="\n\n")                                    # imza sablonumuzun ikinci satirini yazdik
+
+sayim=41
+tahmin_sayisi=0                                                                 # kacinci tahminde sayiyi buldugunu tespit icin degisken kullaniyoruz
+
+while True:                                                                     # kisi bircok tahmin denemesi yapacagi icin dongu olusturuyoruz
+    try:                                                                        # kisinin yanlis bazi veri giris ihtimallerine karsi hata tespit tedbiri aliyoruz
+        tahmin=int(input("Aklimda 0-100 arasi bir sayi tuttum. Hadi bakalim bil de goreyim : "))
+        tahmin_sayisi += 1                                                      # kisinin her tahmin girisinde tahmin sayisini 1 arttiriyoruz
+        if tahmin<0 or tahmin>100:                                              # kisiyi belirtilen aralikta sayi girmesi icin uyariyoruz
+            print("Lutfen talep edilen sayi araligina dikkat edip uygun bir sayi yazin.")
+            continue
+    except ValueError:                                                          # en olasi veri giris hatasina ozel uyari veriyoruz
+        print("Lutfen buraya 0-100 arasi bir SAYI giriniz.")
+        continue
+    if tahmin>sayim:
+        print("Ne yazik ki bilemediniz. Daha kucuk bir sayi denemelisiniz.")
+        continue
+    elif tahmin<sayim:
+        print("Ne yazik ki bilemediniz. Daha buyuk bir sayi denemelisiniz.")
+        continue
+    elif tahmin==sayim:
+        print("Tebrikler. {}. tahmininizde bildiniz. Sizden de bir sey kacmiyor masallah.".format(tahmin_sayisi))       # kacinci tahminda bildigini kisiye format fonksiyonunu kullanarak iletiyoruz.
+        quit()
