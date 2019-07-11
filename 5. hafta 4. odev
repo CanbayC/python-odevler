@@ -1,0 +1,16 @@
+print("SESLI HARFLI ISIMLERI TOPLAMA PROGRAMI")                # imza sablonumuzun ilk satirini yazdik
+print("-" * 15, "ZAFER", "-" * 15, end="\n\n")              # imza sablonumuzun ikinci satirini yazdik
+
+sesliler="AEIİOÖUÜ"                                         # sesli harfleri tanimladik
+
+sesliharftopcular=open("sesliharf_topcular.txt", "w")      # yeni dosyamizi actik
+
+with open("futbolcular.txt", "r") as topcu_list:            # dosyayi acip donguye soktuk
+    for satir in topcu_list:
+        if satir[0] in sesliler:
+            print(satir, file=sesliharftopcular)
+print("""
+Isleminiz basariyla gerceklestirilmistir. 
+Lutfen sonucu gormek icin dosyanizi kontrol ediniz.
+""")                                                        # kullanici islemin tamamlandigini bilsin diye ekrana bilgi girdik
+sesliharftopcular.close()
