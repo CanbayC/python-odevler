@@ -1,0 +1,153 @@
+print("ADAM ASMACA OYUNU")                                      # imza sablonumuzun ilk satirini yazdik
+print("-" * 5, "ZAFER", "-" * 5, end="\n\n")                    # imza sablonumuzun ikinci satirini yazdik
+
+kelimem = "PYTHON"                                              # kelimemizi belirliyoruz
+kelimemlist = list(kelimem)                                     # belirledigimiz kelimeyi listeye donusturuyoruz
+kelimemuzunluk = len(kelimem)                                   # belirledigimiz kelimenin uzunlugunu degiskene atiyoruz
+cap_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"                      # buyuk harfleri tanimliyoruz
+small_letters="abcdefghijklmnopqrstuvwxyz"                      # kucuk harfleri tanimliyoruz
+numbers="0123456789"                                            # rakamlari tanimliyoruz
+
+tahmin_sayisi = 0
+
+print("""
+Bir kelime sectim. 
+Bu kelimeyi bulabilir misin?
+{} hakkin var. 
+Hadi bakalim. 
+""".format(kelimemuzunluk))                                     # oyunun giris kisminda ekrana gelen metni belirliyoruz
+
+for i in range(len(kelimemlist)):                               # belirledigimiz kelimenin uzunlugu olcusunde _ yi ekrana getiriyoruz
+    kelimemlist[i] = "_"
+print('   '.join(kelimemlist))
+print()
+
+
+while True:                                                     # dongumuzu olusturuyoruz
+
+    for i in kelimemlist:                                       # kelimenin bilindigini bildiren dongumuzu olusturduk
+        if "_" not in kelimemlist:
+            print("TEBRIKLER. KELIMEYI BILDINIZ.")
+            quit()
+
+    tahmin = input("Bir harf tahmininde bulunur musunuz : ")    # kullanicidan harf tahminini aliyoruz
+
+    if tahmin in numbers:                                       # kullanicinin rakam girmesi durumunda uyari veriyoruz
+        print("Lutfen buraya RAKAM girMEyiniz, BUYUK HARF giriniz.")
+        continue
+
+    if tahmin in small_letters:                                 # kullanicinin kucuk harf girmesi durumunda uyari veriyoruz
+        print("Lutfen buraya KUCUK HARF girMEyiniz, BUYUK HARF giriniz.")
+        continue
+
+    if not tahmin in cap_letters:                               # kullanicinin bir karakter girmesi durumunda uyari veriyoruz
+        print("Lutfen buraya BUYUK HARF disinda bir karakter girmeyiniz.")
+        continue
+
+    if tahmin == "":                                            # kullanicinin haneyi bos birakmasi durumunda uyari veriyoruz
+        print("Lutfen bos birakmayiniz, bir BUYUK HARF giriniz.")
+        continue
+
+
+                                                                # 53-75. satirlarda tahmin edilen harfin dogru olmasi halinda kelimeye girdi yapiyoruz
+    if tahmin == kelimem[0]:
+        kelimemlist[0] = kelimem[0]
+        print(*kelimemlist)
+
+    elif tahmin == kelimem[1]:
+        kelimemlist[1] = kelimem[1]
+        print(*kelimemlist)
+
+    elif tahmin == kelimem[2]:
+        kelimemlist[2] = kelimem[2]
+        print(*kelimemlist)
+
+    elif tahmin == kelimem[3]:
+        kelimemlist[3] = kelimem[3]
+        print(*kelimemlist)
+
+    elif tahmin == kelimem[4]:
+        kelimemlist[4] = kelimem[4]
+        print(*kelimemlist)
+
+    elif tahmin == kelimem[5]:
+        kelimemlist[5] = kelimem[5]
+        print(*kelimemlist)
+
+
+                                                                    # 79. satirdan sonra girilen harfin yanlis olmasi halindeki uyarilari giriyoruz.
+    if tahmin not in kelimem:
+        tahmin_sayisi += 1
+        kalan_hak = 6 - (tahmin_sayisi)
+        if kalan_hak == 5:
+            print("""
+                             ____
+                          |    |
+                          |    O           
+                          |
+                          |
+                         ---
+
+                         5 HAKKINIZ KALDI!!!
+                """)
+            continue
+        if kalan_hak == 4:
+            print("""
+                             ____
+                          |    |
+                          |    O           
+                          |    |
+                          |
+                         ---
+
+                         4 HAKKINIZ KALDI!!!
+                        """)
+            continue
+        if kalan_hak == 3:
+            print("""
+                             ____
+                          |    |
+                          |  _ O _           
+                          |    |
+                          |
+                         ---
+
+                         3 HAKKINIZ KALDI!!!
+                        """)
+            continue
+        if kalan_hak == 2:
+            print("""
+                             ____
+                          |    |
+                          |  _ O _           
+                          |    |
+                          |    |
+                         ---
+
+                         2 HAKKINIZ KALDI!!!
+                        """)
+            continue
+        if kalan_hak == 1:
+            print("""
+                             ____
+                          |    |
+                          |  _ O _           
+                          |    |
+                          |  _ | _
+                         ---
+
+                         1 HAKKINIZ KALDI!!!
+                        """)
+            continue
+        if kalan_hak == 0:
+            print("""
+                             ____
+                          |    |
+                          |
+                          |    :((
+                          |
+                         ---
+
+                         HAKLARINIZ BITTI. OL - DU - NUZ !!!
+                        """)
+            quit()
