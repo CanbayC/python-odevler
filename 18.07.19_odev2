@@ -1,0 +1,91 @@
+print("SAYI TAHMIN OYUNU")                                                      # imza sablonumuzun ilk satirini yazdik
+print("-" * 5, "ZAFER", "-" * 5, end="\n")                                      # imza sablonumuzun ikinci satirini yazdik
+
+sayim = "1789"                                                                  # sayimizi belirleyip listeye donusturup uzunlugunu belirliyoruz.
+sayimlist = list(sayim)
+sayim_len = len(sayimlist)
+
+
+                                                                                # acilis mesajimizi giriyoruz
+print("""
+4 basamakli bir sayi sectim. Bu sayiyi bulabilir misin? Hadi bakalim. 
+
+_   _   _   _
+
+* Dogru rakam dogru basamakta olursa  +1; dogru rakam yanlis basamakta olursa -1 olarak ifade edilecektir.   
+""")
+
+while True:                                                                     # dongumuzu olusturuyoruz
+    a = 0                                                                       # + ve - islemleri icin degiskenlerimizi belirliyoruz
+    b = 0
+
+    try:                                                                        # hata yakalama icin dongu olusturuyoruz
+
+        tahmin = input("\nLutfen 4 basamakli bir sayi giriniz : ")              # kullanicidan harf tahminini aliyoruz, listeye donusturuyoruz. len ini aliyoruz
+        tahminlist = list(tahmin)
+        tahmin_len = len(tahminlist)
+
+        if tahmin == sayim:                                                     # sayi bilinince cikacak mesaji giriyoruz
+            print("Tebrikler. Sayiyi bildiniz. Deger : +4")
+            quit()
+
+        if 1 <= tahmin_len < 4 or tahmin_len > 4:                               # kullanicinin 4 haneden buyuk sayi girmesi halinde gelecek uyariyi giriyoruz
+            print("4 BASAMAKLI bir sayi girmeniz gerekmektedir.")
+
+        if len(tahmin) == 0:                                                    # kullanicinin veri girmemesi durumuna gore uyari veriyoruz
+            print("Lutfen burayi bos birakmayin. 4 basamakli bir sayi giriniz.")
+
+    except ValueError:                                                          # en olasi hataya ozel uyari mesaji girildi
+        print("Lutfen rakamlar disinda veri girmeyiniz.")
+
+
+                                                                                # buradan asagiya dogru olan kisim alternatiflerin tek tek yazilmasindan ibarettir.
+    if tahminlist[0] == sayimlist[0]:
+        a += 1
+
+    if tahminlist[0] == sayimlist[1]:
+        b -= 1
+
+    if tahminlist[0] == sayimlist[2]:
+        b -= 1
+
+    if tahminlist[0] == sayimlist[3]:
+        b -= 1
+
+    if tahminlist[1] == sayimlist[1]:
+        a += 1
+
+    if tahminlist[1] == sayimlist[0]:
+        b -= 1
+
+    if tahminlist[1] == sayimlist[2]:
+        b -= 1
+
+    if tahminlist[1] == sayimlist[3]:
+        b -= 1
+
+    if tahminlist[2] == sayimlist[2]:
+        a += 1
+
+    if tahminlist[2] == sayimlist[0]:
+        b -= 1
+
+    if tahminlist[2] == sayimlist[1]:
+        b -= 1
+
+    if tahminlist[2] == sayimlist[3]:
+        b -= 1
+
+    if tahminlist[3] == sayimlist[3]:
+        a += 1
+
+    if tahminlist[3] == sayimlist[0]:
+        b -= 1
+
+    if tahminlist[3] == sayimlist[1]:
+        b -= 1
+
+    if tahminlist[3] == sayimlist[2]:
+        b -= 1
+
+    print('+',a, ",", b)                                                                # yukaridaki islemlerin toplamini aliyoruz
